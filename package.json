@@ -1,9 +1,10 @@
 {
-  "homepage": "https://kandiahc-it.github.io/Portfolio-in-react",
+  
 
   "name": "portfolioapp",
   "version": "0.1.0",
-  "private": true,
+  "source":"public/index.html",
+  "homepage": "https://kandiahc-it.github.io/Portfolio-in-react",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@testing-library/jest-dom": "^5.17.0",
