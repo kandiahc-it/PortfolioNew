@@ -1,7 +1,7 @@
 {
   "name": "portfolioapp",
   "version": "0.1.0",
-  "homepage":"https://kandiahc-it.github.io/kandiahc-it/PortfolioNew",
+  "homepage":"https://kandiahc-it.github.io/PortfolioNew",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.14.0",
