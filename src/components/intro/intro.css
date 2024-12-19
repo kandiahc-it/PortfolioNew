@@ -1,23 +1,19 @@
 #intro{
     height:calc(100vh - 4rem);
-    width:100vw;
-    max-width: 75rem;
+    width:80%;
     margin: 0 auto;
-    overflow:hidden;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
-.bg{
-    position:absolute;
-    top: -4rem;
-    right:0;
-    z-index: -1;
-    object-fit:cover;
-    height:100vh;
 
-}
+
+
 .introContent{
     height:100vh;
-    width:100vw;
+    width:50%;
     padding:2rem;
     font-size:  3rem;
     font-weight:700;
@@ -32,6 +28,11 @@
 .introName{
     color: yellow;
 }
+.introDesc{
+ color:white;
+ font-weight: 400;
+ font-size: 25px;
+}
 .introPara{
     font-size: medium;
     font-weight: 300;
@@ -43,20 +44,121 @@
    padding: 0.75rem 1.5rem;
    border:none;
    border-radius: 2rem;
-
+color: black;
 }
 .btnImg{
     object-fit: cover;
     margin:0 0.25rem;
     height:1rem;
 }
+.hero{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:50px;
+   
+}
+.heroimgcontaine{
+    width: 80%;
+    height: 550px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.bg{
+    position:absolute;
+    z-index: 1;
+    top:-62px;
+    left:100px;
+    height: 600px;
+    border-radius: 10000px;
+
+}
+.downloadicon{
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: 400px;
+    right: 80%;
+    z-index: 2;
+    gap:1rem;
+    background: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 100%;
+    box-shadow: 0 0 20px #fff700, 0 0 30px #e3d400,0 0 45px #e8e800;
+}
+a>h2{
+    color: black;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.downloadiconin{
+    height: 2rem;
+    width: 2rem;
+    fill:black;
+}
+.bgcicle{
+    position: absolute;
+    top: 100px;
+    
+    z-index: 0;
+  
+}
+.bgcircle2{
+    position: absolute;
+    top: 100px;
+    /* right: 0; */
+    z-index: 1;
+}
+
+.heroIcons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+    gap:20px;
+}
+a:hover{
+    color: yellow;
+}
+.iconBox{
+    background: #3d3d3d;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    transition:transform 0.5s ease;
+}
+.iconBox:hover{
+    transform:scale(1.2);
+    
+}
 @media screen and (max-width:840px) {
+    #intro{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .hero{
+        width: 100%;
+        height: 600px;
+    }
     .bg{
-        right: -10vw;
-        
+        top:-62px;
+        left: 60px;
     }
     .introContent{
         font-size:10vw;
+        width: 100%;
 
     }
     .hello{
@@ -64,10 +166,17 @@
     }
 }
 @media screen and (max-width:480px) {
-    .bg{
-       right:-20vw;
-        
+   .hero{
+    height: fit-content;
+    flex-direction: column;
+   }
+   .bg{
+        top:-62px;
+        left: 10px;
     }
+   .heroIcons{
+    flex-direction: row;
+   }
     
     
 }

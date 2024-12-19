@@ -1,0 +1,148 @@
+#Eduskills{
+     min-height: calc(100vh-4rem);
+     padding-top: 25px;
+     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    gap:100px;
+    
+}
+.eduskillsTitle{
+    margin: 1rem;
+    font-size: 3rem;
+}
+.edufoot{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: space-between;
+}
+.circle{
+    height: 16px;
+    width: 16px;
+    border-radius: 1000px;
+    background: #797979;
+    margin-top: 2px;
+}
+.educontainer:hover > .circle{
+    background: yellow;
+}
+.line{
+    height: 190px;
+    width: 3px;
+    background: #797979;
+    position: absolute;
+    margin-left: 6px;
+    margin-top: 10px;
+    z-index: -1;
+}
+.educontainer{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    gap:25px;
+    
+    
+}
+.eduContaninerItems{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    align-items:flex-start;
+    gap:7px;
+}
+.eduskillsLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 400px;
+    position: relative;
+}
+.eduskillsRight{
+    display: flex ;
+    flex-direction: column;
+    width: 51%;
+    gap:40px;
+}
+.Describe{
+    display: none;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 32px;
+}
+.PercentList{
+    display: flex;
+    flex-direction: column;
+    height:fit-content;
+    gap:20px;
+}
+.InerBox{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.containerbg{
+    display: flex;
+    width: 551px;
+    height: 8px;
+    overflow: hidden;
+    background: #f5f3fe8e;
+    border-radius: 10px;
+}
+.containerIn{
+    border-radius: 10px;
+}
+.Yearedu{
+    margin-top: 7px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.skillName{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+@media screen and (max-width:768px) {
+    #eduskills{
+        height: fit-content;
+    }
+    .Describe{
+        display: block;
+    }
+    .edufoot{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .eduskillsRight{
+        width: 90%;
+       align-items: center;
+       margin-top: -50px;
+    }
+}
+
+@media screen and (max-width:456px) {
+    #eduskills{
+        height: fit-content;
+        padding-left: 50px;
+    }
+    .edufoot{
+        width: 100%;
+        flex-direction: column;
+    }
+    .eduskillsRight{
+        width: 90%;
+    }
+    .PercentList{
+        width: 100%;
+    }
+    .containerbg{
+        width: 90%;
+    }
+}

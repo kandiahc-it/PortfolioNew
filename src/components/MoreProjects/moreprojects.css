@@ -1,0 +1,39 @@
+#moreprojects{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    
+}
+.moreprojectnav{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    position:fixed;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    z-index: 3;
+}
+.worksImgsporj{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    gap: 10px;
+    margin-top: 100px;
+}
+@media screen and (max-width:720px){
+    .worksImgsporj{
+        width: 90%;
+        gap:40px;
+    }
+}
+@media screen and (max-width:480px){
+    .worksImgsporj{
+        gap:40px;
+    }
+}

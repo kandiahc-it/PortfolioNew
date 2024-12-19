@@ -1,64 +1,113 @@
-.contactPage{
-    min-height:calc(100vh- 4rem) ;
-    width:100vw;
-    max-width: 60rem;
-    margin:0 auto;
-    text-align:center;
+#contactPage {
+    height: calc(100vh-4rem);
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: -10px;
+    padding-bottom: 40px;
+}
+
+.contact {
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
-.contactPageTitle{
-    font-weight:300;
-    font-size: 1rem;
+
+.contactPageTitle {
+    font-weight: 300;
+    font-size: 3rem;
 }
-.contactDesc{
+
+.contactDesc {
     padding: 1rem;
     font-size: medium;
     font-weight: 300;
 }
-.contactForm{
-    margin:1rem;
+
+.contactForm {
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
-    width:90vw;
-    max-width: 60rem;
+    gap:10px;
+    width: 80%;
 }
-.name , .email , .msg{
-    font-size:medium ;
-    width: 100%;
-    max-width:40rem ;
 
-    margin:0.5rem;
+.name,
+.email,
+.msg {
+    font-size: medium;
+    width: 100%;
+    margin: 0.5rem;
     padding: 0.5rem 1rem;
-    color:white;
+    color: rgb(252, 252, 252);
     border: none;
     border-radius: 0.5rem;
-    background: rgb(40,40,40);
+    background: #3d3d3d;
 
 }
-.submitBtn{
-    background: white;
-    border:none;
-    padding:0.75rem 3.5rem;
-    border-radius: 0.5rem;
-    margin:2rem;
 
+.submitBtn {
+    border: none;
 }
-.Links{
+.contactright{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.contactrightText{
+    display: none;
+    font-weight: 600;
+    font-size: 30px;
+}
+.contactininfor{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap:5px;
+}
+.full{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    gap:25px;
+    height: 50px;
+    justify-content: left;
+    margin-left: 30%;
+    align-items: center;
+    transition: transform 0.2s ease;
 }
-.link{
-    object-fit: cover;
-    height:3rem;
-    width: 3rem;
-
-    margin:0 0.75rem;
-
+.full:hover > .icon{
+    transform: translateX(-10px);
+}
+@media screen and (max-width:720px){
+    #contactPage{
+        height: fit-content;
+        width: 100%;
+        flex-direction: column;
+        gap:20px;
+        margin-top: 70px;
+    }
+    .contact{
+        width: 90%;
+    }
+    .contactright{
+        width: 90%;
+       
+    }
+    .full{
+        position: relative;
+        left: -80px;
+    }
+    .contactrightText{
+        display: block;
+        margin-bottom: 20px;
+    }
 }
