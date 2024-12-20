@@ -5,6 +5,7 @@
     align-items: center;
     position: relative;
     width: 100%;
+   
     
 }
 .moreprojectnav{
@@ -15,7 +16,7 @@
     position:fixed;
     background: transparent;
     backdrop-filter: blur(10px);
-    z-index: 3;
+    z-index: 3; top: 0;
 }
 .worksImgsporj{
     display: flex;
@@ -33,6 +34,9 @@
     }
 }
 @media screen and (max-width:480px){
+    .moreprojectnav{
+        width: 100%;
+    }
     .worksImgsporj{
         gap:40px;
     }

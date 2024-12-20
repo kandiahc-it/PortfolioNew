@@ -8,7 +8,7 @@ const Eduskills = () => {
   const SkillsInTechnologies=[
     {name:"HTML",percentage:"90%"},
     {name:"React",percentage:"85%"},
-    {name:"Angular",percentage:"25%"},
+    {name:"Express",percentage:"25%"},
     {name:"Node Js",percentage:"45%"},
   ];
 

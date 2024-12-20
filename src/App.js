@@ -10,7 +10,9 @@ import MoreProjects from "./components/MoreProjects/MoreProjects.jsx";
 import Eduskills from "./components/Eduskills/Eduskills.jsx";
 function App() {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
+  // Restore scroll position when the pathname is "/"
   useEffect(() => {
     if (pathname === "/") {
       const position = sessionStorage.getItem("lastviewed");
@@ -20,11 +22,28 @@ function App() {
       }
     }
   }, [pathname]);
-  const navigate = useNavigate();
+
+  // Save the scroll position whenever the user scrolls
+  useEffect(() => {
+    const saveScrollPosition = () => {
+      if (pathname === "/") {
+        sessionStorage.setItem("lastviewed", window.scrollY);
+      }
+    };
+
+    window.addEventListener("scroll", saveScrollPosition);
+
+    return () => {
+      window.removeEventListener("scroll", saveScrollPosition);
+    };
+  }, [pathname]);
+
+  // Handle navigation and save scroll position before navigating
   const handleNavigate = (dest) => {
     sessionStorage.setItem("lastviewed", window.scrollY);
     navigate(dest);
   };
+
 
   return (
     <div className="App">
@@ -45,7 +64,15 @@ function App() {
             </>
           }
         />
-        <Route path="/projects" element={<MoreProjects />} />
+        <Route
+          path="/projects"
+          element={
+            <>
+              <MoreProjects /> 
+              <Footer />
+            </>
+          }
+        />
       </Routes>
     </div>
   );
