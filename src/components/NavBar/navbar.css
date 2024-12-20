@@ -81,7 +81,7 @@
     padding: 0.5rem;
     height: fit-content;
     min-width: 15rem;
-    background: rgb(40,40,40);
+    background: rgb(6, 6, 6);
     border-radius: 1rem;
     flex-direction: column;
     
@@ -96,6 +96,10 @@
     
 }
 @media screen and (max-width: 720px) {
+    .navbar{
+        padding: 0;
+        border-radius: 0;
+    }
     
     .mobMenu {
         display: flex;

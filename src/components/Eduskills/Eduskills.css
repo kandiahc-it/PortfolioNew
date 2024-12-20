@@ -110,6 +110,7 @@
 @media screen and (max-width:768px) {
     #eduskills{
         height: fit-content;
+        
     }
     .Describe{
         display: block;
@@ -131,12 +132,17 @@
     #eduskills{
         height: fit-content;
         padding-left: 50px;
+        padding: 0;
+        width: 100%;
     }
     .edufoot{
         width: 100%;
         flex-direction: column;
     }
-    .eduskillsRight{
+    .educontainer{
+        width: 100%;
+    }
+    .eduskillsRight,.eduskillsLeft{
         width: 90%;
     }
     .PercentList{

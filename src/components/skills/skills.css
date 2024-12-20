@@ -113,6 +113,9 @@
         font-size: 3vw;
         
     }
+    .skillBar{
+        padding: 0;
+    }
     .skillBarImg{
         height:2.25rem;
         width:2.25rem;

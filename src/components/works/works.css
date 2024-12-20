@@ -114,6 +114,9 @@
     
 }
 @media screen and (max-width:480px) {
+    #works{
+        padding: 0;
+    }
     .worksImgs{
         height: fit-content;
         gap:40px;
