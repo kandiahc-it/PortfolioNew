@@ -1,5 +1,15 @@
 # 💫 About Me:
-🔭 I’m currently working on<br>👯 I’m looking to collaborate on<br>🤝 I’m looking for help with<br>🌱 I’m currently learning<br>💬 Ask me about<br>⚡ Fun fact
+🔭 I’m currently working on React projects, focusing on responsive design, custom scroll functionality, and APIs with Spring Boot.
+
+👯 I’m looking to collaborate on React-based front-end projects, especially those involving UI/UX design, interactive components, or integration with APIs.
+
+🤝 I’m looking for help with optimizing React component structures, state management, and best practices for passing data between nested components.
+
+🌱 I’m currently learning advanced React concepts, responsive design techniques, and API development using Spring Boot.
+
+💬 Ask me about React, UI/UX design, JavaScript, or how to build intuitive front-end applications.
+
+⚡ Fun fact: I’ve built a weather app using React and OpenWeather API and recently created a login/signup page with Formik, Yup validation, and Toastify!
 
 
 ## 🌐 Socials:
