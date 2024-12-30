@@ -8,7 +8,15 @@ import Footer from "./components/footer/footer.js";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import MoreProjects from "./components/MoreProjects/MoreProjects.jsx";
 import Eduskills from "./components/Eduskills/Eduskills.jsx";
+import Loading from "./components/LoadingPage/Loading.jsx";
 function App() {
+  const [isLoading,setIsLoading]=useState(true);
+  useEffect(()=>{
+    setTimeout(()=>{
+      setIsLoading(false);
+    },4000);
+  },[]);
+
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
@@ -47,6 +55,8 @@ function App() {
 
   return (
     <div className="App">
+      {isLoading?
+      <Loading/> :(
       <Routes>
         <Route
           path="/"
@@ -74,6 +84,8 @@ function App() {
           }
         />
       </Routes>
+      )  
+    }
     </div>
   );
 }
