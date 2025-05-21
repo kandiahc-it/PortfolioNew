@@ -69,7 +69,7 @@ const Contact = () => {
         <h1 className='contactPageTitle'><PersonIcon sx={{height:"3rem",width:"3rem",marginTop:"25px"}}/> Contact Me</h1>
         <span className='contactDesc'>Please fill out the form to discuss any work opportunities</span>
         <form className='contactForm' ref={form} onSubmit={sendEmail}>
-          <input type='text' className='name' placeholder='Your Name' name='your_name' required />
+          <input type='text' className='name' placeholder='Your Name' name='from_name' required />
           <input type='email' className='email' placeholder='Your Email' name='your_email' required />
           <textarea className='msg' name='message' rows="5" placeholder='Your message' required></textarea>
           <button type='submit' value='Send' className='submitBtn'><SeeMoreButton text="Submit"/></button>
