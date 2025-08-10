@@ -16,39 +16,12 @@ import styled from "styled-components";
 import { primarycolor } from "../StyledComponents/theme";
 import { yellow } from "@mui/material/colors";
 import { Tooltip } from "@mui/material";
+import { data } from "../../data";
 
 const Intro = () => {
-  const name = "Kandiah";
-  const skillDesc =
-    " I specialize in web design and interactive UI development, with expertise in HTML, CSS, React, and frontend technologies. Currently, I’m enhancing my skills by learning the MERN stack. This allows me to build seamless, responsive applications with both frontend and backend integration.";
-  const socialLinks = [
-    {
-      head: "Instagram",
-      icon: InstagramIcon,
-      link: "https://instagram.com/kandiah_ck_01",
-    },
-    {
-      head: "LinkedIn",
-      icon: LinkedInIcon,
-      link: "https://linkedin.com/in/kandiah-c-609328290/",
-    },
-    {
-      head: "GitHub",
-      icon: GitHubIcon,
-      link: "https://github.com/kandiahc-it",
-    },
-    {
-      head: "Mail",
-      icon: MailOutlineIcon,
-      link: 'mailto:"kandiahc2006@gmail.com"',
-    },
-    {
-      head: "Phone",
-      icon: LocalPhoneIcon,
-      link: "tel:9342283409",
-    },
-  ];
-
+  const name = data.name;
+  const skillDesc = data.skillDesc;
+   const socialLinks = data.socialLinksHero;
   return (
     <section id="intro">
       <div className="introContent">
@@ -61,7 +34,7 @@ const Intro = () => {
         <span className="introDesc">
           <Typewriter
             options={{
-              strings: ["Web Designer", "Web Developer"],
+              strings: data.TechKnown,
               autoStart: true,
               loop: true,
             }}
@@ -79,7 +52,7 @@ const Intro = () => {
       <div className="hero">
         <div className="heroimgcontaine">
           <div className="downloadicon">
-            <a href="resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={data.Resume} target="_blank" rel="noopener noreferrer">
               <DownloadRoundedIcon
                 className="downloadiconin"
                 style={{ fill: "black" }}

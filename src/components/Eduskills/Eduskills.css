@@ -78,7 +78,9 @@
 .PercentList{
     display: flex;
     flex-direction: column;
-    height:fit-content;
+    height:300px;
+    overflow: scroll;
+    overflow-x: hidden;
     gap:20px;
 }
 .InerBox{

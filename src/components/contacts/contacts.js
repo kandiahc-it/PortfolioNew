@@ -5,39 +5,9 @@ import { GitHub, Instagram, LinkedIn, Mail, Phone } from '@mui/icons-material';
 import { primarycolor } from '../StyledComponents/theme';
 import { SeeMoreButton } from '../StyledComponents/styles';
 import PersonIcon from '@mui/icons-material/Person';
+import { data } from '../../data';
 const Contact = () => {
-  const socialLinks=[
-    {
-      title:"Instagram",
-      img:Instagram,
-      text:"kandiah_ck_01",
-      link:"https://instagram.com/kandiah_ck_01"
-    },
-    {
-      title:"Github",
-      img:GitHub,
-      text:"kandiah-it",
-      link:"https://github.com/kandiahc-it"
-    },
-    {
-      title:"LinkedIn",
-      img:LinkedIn,
-      text:"kandiahc",
-      link:"https://linkedin.com/in/kandiah-c-609328290/"
-    },
-    {
-      title:"Phone",
-      img:Phone,
-      text:"9342283409",
-      link:"tel:9342283409"
-    },
-    {
-      title:"Mail",
-      img:Mail,
-      text:"kandiahc2006@gmail.com",
-      link:"mailto:'kandiahc2006@gmail.com'"
-    },
-  ]
+  const socialLinks= data.socialLinks;
 
 
 
