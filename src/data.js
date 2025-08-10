@@ -14,7 +14,7 @@ import webDesign from "./components/assets/web-designer.png";
 import AppDesign from "./components/assets/app-design.png";
 
 export const data = {
-    name : "Kandiah C",
+    name : "Kandiah",
     TechKnown : ["Web Designer", "Web Developer","App Developer"],
     Resume :"https://drive.google.com/file/d/1DkJZL1v8shT-ookcTk77BQDmag6R1Zw_/view?usp=sharing",
     skillDesc :
