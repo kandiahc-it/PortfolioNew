@@ -12,7 +12,8 @@ import Calculator from "./components/assets/Calculator.png";
 import UIDesign from "./components/assets/ui-design.png";
 import webDesign from "./components/assets/web-designer.png";
 import AppDesign from "./components/assets/app-design.png";
-
+import pdfquerychatbot from "./components/assets/PDF_query_chatbot.png"
+import bookRecky from "./components/assets/BookRecky.png"
 export const data = {
     name : "Kandiah C",
     TechKnown : ["Web Designer", "Web Developer","App Developer"],
@@ -119,11 +120,23 @@ export const data = {
       },
       {
         img: AppDesign ,
-        heading: "App Design",
-        para: "Design intuitive and visually engaging mobile applications,specializing in creating user-friendly interfaces and seamless user experiences.",
+        heading: "App Development",
+        para: "Design and Develop Intuitive, visually engaging mobile applications with user-friendly interfaces and seamless experiences.",
       },
     ],
     ProjectList : [
+        {
+          head:"BookRecky",
+          img:bookRecky,
+          desc:"BOOKRECKY is a cross-platform React Native app combining book recommendations with social features. Users share book photos, explore picks, and build reading lists. With Zustand for state and secure auth, plus cron jobs to keep servers active, it delivers modern UI/UX and strong performance.",
+          link:"https://github.com/kandiahc-it/BookReckyApp"
+        },
+        {
+          head:"RAG Application",
+          img:pdfquerychatbot,
+          desc:"A RAG-based PDF chatbot that extracts and stores content in a vector database, enabling LLM-powered, context-aware answers with support for multiple PDF uploads",
+          link:"https://github.com/kandiahc-it/Pdf_Querying_ChatBot"
+        },
         {
           head:"ChatApp",
           img:ChatApp,
