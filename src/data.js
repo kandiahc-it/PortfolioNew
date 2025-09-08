@@ -15,7 +15,7 @@ import AppDesign from "./components/assets/app-design.png";
 import pdfquerychatbot from "./components/assets/PDF_query_chatbot.png"
 import bookRecky from "./components/assets/BookRecky.png"
 export const data = {
-    name : "Kandiah C",
+    name : "Kandiah",
     TechKnown : ["Web Designer", "Web Developer","App Developer"],
     Resume :"https://drive.google.com/file/d/1DkJZL1v8shT-ookcTk77BQDmag6R1Zw_/view?usp=sharing",
     skillDesc :
