@@ -51,7 +51,7 @@
     padding: 1rem;
     gap:1rem;
     border-radius:2rem ;
-    
+    cursor: pointer;
 }
 .desktopMenubtn>p{
     font-size: 14px;

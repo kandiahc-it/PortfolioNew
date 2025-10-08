@@ -19,8 +19,8 @@ export const data = {
     TechKnown : ["Web Designer", "Web Developer","App Developer"],
     Resume :"https://drive.google.com/file/d/1DkJZL1v8shT-ookcTk77BQDmag6R1Zw_/view?usp=sharing",
     skillDesc :
-    " I specialize in web design and interactive UI development, with expertise in HTML, CSS, React, and frontend technologies. Currently, I’m enhancing my skills by learning the MERN stack. This allows me to build seamless, responsive applications with both frontend and backend integration.",
-    socialLinksHero :[
+    " I specialize in full-stack web development with a strong focus on modern, interactive, and responsive UI design. I excel in frontend technologies such as HTML, CSS, JavaScript, and React, and am highly proficient in backend development using the MERN stack (MongoDB, Express, React, Node.js). Alongside web development, I’m expanding my expertise into mobile app development with React Native and Flutter, enabling me to craft cross-platform experiences. I’m also exploring the exciting fields of AI and machine learning to integrate intelligent features into my projects. Continuously learning and evolving, I’m passionate about building seamless digital experiences across web, mobile, and intelligent systems.",
+      socialLinksHero :[
     {
       head: "Instagram",
       icon: InstagramIcon,

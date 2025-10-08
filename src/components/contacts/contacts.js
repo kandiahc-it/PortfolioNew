@@ -36,7 +36,7 @@ const Contact = () => {
   return (
     <section id='contactPage'>
       <div className='contact'>
-        <h1 className='contactPageTitle'><PersonIcon sx={{height:"3rem",width:"3rem",marginTop:"25px"}}/> Contact Me</h1>
+        <h1 className='contactPageTitle'><PersonIcon sx={{height:"3rem",width:"3rem",marginTop:"25px"}}/>Contact Me</h1>
         <span className='contactDesc'>Please fill out the form to discuss any work opportunities</span>
         <form className='contactForm' ref={form} onSubmit={sendEmail}>
           <input type='text' className='name' placeholder='Your Name' name='from_name' required />
