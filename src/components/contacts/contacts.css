@@ -45,13 +45,20 @@
 .msg {
     font-size: medium;
     width: 100%;
-    margin: 0.5rem;
+    margin: 0.5rem 0;
     padding: 0.5rem 1rem;
-    color: rgb(252, 252, 252);
+    color: #fcfcfc;
     border: none;
     border-radius: 0.5rem;
-    background: #3d3d3d;
+    background-color: #3d3d3d;
+    outline: none; 
+    box-sizing: border-box; 
+}
 
+.name:focus,
+.email:focus,
+.msg:focus {
+    border: 1px solid yellow;
 }
 
 .submitBtn {

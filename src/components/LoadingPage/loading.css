@@ -1,4 +1,4 @@
-.logoPage{
+/* .logoPage{
     width: 100%;
     height: 100%;
     margin: 0;
@@ -28,7 +28,7 @@
 .c path{
     fill: none;
     animation: write 3s ease-in-out forwards;
-    /* fill: aliceblue; */
+   
     
 }
 .pen{
@@ -44,4 +44,228 @@
         fill: white;
     }
     
+} */
+
+@keyframes cinematicZoom {
+    0% {
+        transform: scale(5) translateZ(200px);
+        opacity: 0;
+        filter: blur(20px);
+    }
+    40% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1) translateZ(0);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes write {
+    0% {
+        stroke-dashoffset: 450;
+        opacity: 0;
+        transform: scale(0.8) rotate(-5deg);
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: white;
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes kandiahParallax {
+    0% {
+        opacity: 0;
+        transform: translateZ(-300px) translateY(80px) scale(0.4);
+        filter: blur(15px) brightness(0.5);
+    }
+    50% {
+        filter: blur(5px) brightness(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0) translateY(0) scale(1);
+        filter: blur(0) brightness(1);
+    }
+}
+
+@keyframes penCinematic {
+    0% {
+        opacity: 0;
+        transform: translateZ(400px) translateX(150px) translateY(-150px) rotate(180deg) scale(0.2);
+        filter: blur(20px);
+    }
+    40% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+        transform: translateZ(50px) translateX(-15px) translateY(15px) rotate(-15deg) scale(1.3);
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateZ(0) translateX(0) translateY(0) rotate(0deg) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes depthPulse {
+    0%, 100% {
+        transform: translateZ(0) scale(1);
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+    }
+    50% {
+        transform: translateZ(30px) scale(1.05);
+        filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 50px rgba(255, 255, 255, 0.5));
+    }
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0) translateX(0) scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(calc(var(--float-x) * 50px)) scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes backgroundZoom {
+    0% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gridPerspective {
+    0% {
+        transform: perspective(1000px) rotateX(60deg) translateZ(-500px);
+        opacity: 0;
+    }
+    100% {
+        transform: perspective(1000px) rotateX(60deg) translateZ(0);
+        opacity: 0.1;
+    }
+}
+
+.logoPage {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px;
+}
+
+.logoPage::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridPerspective 2s ease-out forwards, backgroundZoom 2s ease-out;
+    transform-origin: center center;
+}
+
+.logoPage::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+    pointer-events: none;
+}
+
+.logoContainer {
+    width: 250px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: cinematicZoom 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.kandiah, .c, .pen {
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.kandiah {
+    animation: kandiahParallax 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.8));
+    will-change: transform, opacity;
+}
+
+.c {
+    margin-right: 35px;
+    transform-style: preserve-3d;
+    animation: depthPulse 3s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+.c path {
+    fill: none;
+    stroke: white;
+    stroke-width: 0.2;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: write 3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 1.2s;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
+    will-change: stroke-dashoffset, fill;
+}
+
+.pen {
+    margin-left: 27px;
+    margin-bottom: 25px;
+    animation: penCinematic 2.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 1.8s;
+    opacity: 0;
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
+    will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logoPage::before,
+    .logoContainer,
+    .kandiah,
+    .c,
+    .c path,
+    .pen {
+        animation: none;
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+
+    .c path {
+        fill: white;
+        stroke-dashoffset: 0;
+    }
 }
