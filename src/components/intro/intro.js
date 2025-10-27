@@ -60,9 +60,10 @@ const Intro = () => {
               <h2>CV</h2>
             </a>
           </div>
-          <img src={frame} alt="" className="bgcicle" />
+          {/* <img src={frame} alt="" className="bgcicle" /> */}
           <img src={bg} alt="photo" className="bg" />
-          <img src={frame2} alt="" className="bgcircle2" />
+          <div className ='glow-circle'></div>
+          {/* <img src={frame2} alt="" className="bgcircle2" /> */}
         </div>
         <div className="heroIcons">
           {socialLinks.map((item, index) => (
