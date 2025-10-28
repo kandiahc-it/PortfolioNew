@@ -107,7 +107,7 @@ color: black;
 .bg{
     position:absolute;
     z-index: 1;
-    top:15px;
+    top:5px;
     left:9%;
     height: 500px;
     border-radius: 10000px;
