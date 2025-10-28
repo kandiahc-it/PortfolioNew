@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PortfolioNew/static/css/main.299500c8.css",
+    "main.css": "/PortfolioNew/static/css/main.060108ce.css",
     "main.js": "/PortfolioNew/static/js/main.7e0d4fcd.js",
     "static/media/RestaurantDesign.png": "/PortfolioNew/static/media/RestaurantDesign.4851b3a613f335fd5d81.png",
     "static/media/ChatApp.png": "/PortfolioNew/static/media/ChatApp.fe0e5daa18b2a025c4ba.png",
@@ -15,11 +15,11 @@
     "static/media/web-designer.png": "/PortfolioNew/static/media/web-designer.93bc573c58b3e5034fbb.png",
     "static/media/ui-design.png": "/PortfolioNew/static/media/ui-design.c4acd455fc2040eddcc8.png",
     "index.html": "/PortfolioNew/index.html",
-    "main.299500c8.css.map": "/PortfolioNew/static/css/main.299500c8.css.map",
+    "main.060108ce.css.map": "/PortfolioNew/static/css/main.060108ce.css.map",
     "main.7e0d4fcd.js.map": "/PortfolioNew/static/js/main.7e0d4fcd.js.map"
   },
   "entrypoints": [
-    "static/css/main.299500c8.css",
+    "static/css/main.060108ce.css",
     "static/js/main.7e0d4fcd.js"
   ]
 }
