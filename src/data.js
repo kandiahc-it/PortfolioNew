@@ -17,7 +17,7 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 export const data = {
     name : "Kandiah",
     TechKnown : ["Web Designer", "Web Developer","App Developer"],
-    Resume :"https://drive.google.com/file/d/1gbKte5X5qomuDhc880PLQNMG_BPBowd1/view?usp=sharing",
+    Resume :"https://drive.google.com/file/d/1E5rIubeovefoTTVxhwCN174e7uojr02L/view?usp=sharing",
     skillDesc :
     " I specialize in full-stack web development with a strong focus on modern, interactive, and responsive UI design. I excel in frontend technologies such as HTML, CSS, JavaScript, and React, and am highly proficient in backend development using the MERN stack (MongoDB, Express, React, Node.js). Alongside web development, I’m expanding my expertise into mobile app development with React Native and Flutter, enabling me to craft cross-platform experiences. I’m also exploring the exciting fields of AI and machine learning to integrate intelligent features into my projects. Continuously learning and evolving, I’m passionate about building seamless digital experiences across web, mobile, and intelligent systems.",
       socialLinksHero :[
