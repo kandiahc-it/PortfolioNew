@@ -26,7 +26,7 @@ const Works = ({handleNavigate}) => {
             <div className="ImgBox">
               <a href={item.link} target='_blank'  rel="noopener noreferrer">
                 {" "}
-                <img src={item.img} className="img" />{" "}
+                <img src={item.img} className="img" loading="lazy"/>{" "}
               </a>
             </div>
             <div className="worksRight">

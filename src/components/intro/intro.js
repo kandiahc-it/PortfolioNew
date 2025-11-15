@@ -61,7 +61,7 @@ const Intro = () => {
             </a>
           </div>
           {/* <img src={frame} alt="" className="bgcicle" /> */}
-          <img src={bg} alt="photo" className="bg" />
+          <img src={bg} alt="photo" className="bg" loading="lazy"/>
           <div className ='glow-circle'></div>
           {/* <img src={frame2} alt="" className="bgcircle2" /> */}
         </div>

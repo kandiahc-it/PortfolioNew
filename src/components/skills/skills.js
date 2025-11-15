@@ -19,7 +19,7 @@ const skills = () => {
        {skillList.map((item,index)=>(
         <div className="skillBar" key={index}>
             <div className="skillBarimgContainer">
-                <img src={item.img} className="skillBarImg"/>
+                <img src={item.img} className="skillBarImg" loading="lazy"/>
             </div>    
             <div className="skillBarText">
                 <h2>{item.heading}</h2>
