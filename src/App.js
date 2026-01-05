@@ -10,35 +10,41 @@ import MoreProjects from "./components/MoreProjects/MoreProjects.jsx";
 import Eduskills from "./components/Eduskills/Eduskills.jsx";
 import Loading from "./components/LoadingPage/Loading.jsx";
 function App() {
-  const [isLoading, setIsLoading] = useState(() => {
-    // Initialize state based on session storage
-    return !sessionStorage.getItem("app_loaded");
-  });
-
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    if (!isLoading) return; // Skip if already loaded in this session
-
-    const handleLoad = () => {
+    setTimeout(() => {
       setIsLoading(false);
-      sessionStorage.setItem("app_loaded", "true");
-    };
+    }, 5000);
+  }, []);
+  // const [isLoading, setIsLoading] = useState(() => {
+  //   // Initialize state based on session storage
+  //   return !sessionStorage.getItem("app_loaded");
+  // });
 
-    // Check if the page is already loaded
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
-    }
+  // useEffect(() => {
+  //   if (!isLoading) return; // Skip if already loaded in this session
 
-    // Safety fallback
-    const timeoutId = setTimeout(() => {
-      setIsLoading(false);
-      sessionStorage.setItem("app_loaded", "true");
-    }, 4000);
+  //   const handleLoad = () => {
+  //     setIsLoading(false);
+  //     sessionStorage.setItem("app_loaded", "true");
+  //   };
 
-    return () => clearTimeout(timeoutId);
-  }, [isLoading]);
+  //   // Check if the page is already loaded
+  //   if (document.readyState === "complete") {
+  //     handleLoad();
+  //   } else {
+  //     window.addEventListener("load", handleLoad);
+  //     return () => window.removeEventListener("load", handleLoad);
+  //   }
+
+  //   // Safety fallback
+  //   const timeoutId = setTimeout(() => {
+  //     setIsLoading(false);
+  //     sessionStorage.setItem("app_loaded", "true");
+  //   }, 4000);
+
+  //   return () => clearTimeout(timeoutId);
+  // }, [isLoading]);
 
   const { pathname } = useLocation();
   const navigate = useNavigate();
