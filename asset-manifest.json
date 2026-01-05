@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PortfolioNew/static/css/main.e58cb4a3.css",
-    "main.js": "/PortfolioNew/static/js/main.74ff6386.js",
+    "main.css": "/PortfolioNew/static/css/main.26d6dc9d.css",
+    "main.js": "/PortfolioNew/static/js/main.3a977b19.js",
     "static/media/RestaurantDesign.png": "/PortfolioNew/static/media/RestaurantDesign.4851b3a613f335fd5d81.png",
     "static/media/ChatApp.png": "/PortfolioNew/static/media/ChatApp.fe0e5daa18b2a025c4ba.png",
     "static/media/LoginForm.png": "/PortfolioNew/static/media/LoginForm.6b06eaa819e232a963bd.png",
@@ -15,11 +15,11 @@
     "static/media/web-designer.png": "/PortfolioNew/static/media/web-designer.93bc573c58b3e5034fbb.png",
     "static/media/ui-design.png": "/PortfolioNew/static/media/ui-design.c4acd455fc2040eddcc8.png",
     "index.html": "/PortfolioNew/index.html",
-    "main.e58cb4a3.css.map": "/PortfolioNew/static/css/main.e58cb4a3.css.map",
-    "main.74ff6386.js.map": "/PortfolioNew/static/js/main.74ff6386.js.map"
+    "main.26d6dc9d.css.map": "/PortfolioNew/static/css/main.26d6dc9d.css.map",
+    "main.3a977b19.js.map": "/PortfolioNew/static/js/main.3a977b19.js.map"
   },
   "entrypoints": [
-    "static/css/main.e58cb4a3.css",
-    "static/js/main.74ff6386.js"
+    "static/css/main.26d6dc9d.css",
+    "static/js/main.3a977b19.js"
   ]
 }
