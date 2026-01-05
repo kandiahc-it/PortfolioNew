@@ -41,36 +41,28 @@ const Eduskills = () => {
             </div>
           ))}
         </div>
-        <div
-          className="eduskillsRight"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        >
-          <div className="Describe">Skills</div>
-          <div className="PercentList" >
-            {SkillsInTechnologies.map((item, index) => (
-              <div
-                key={index}
-                className="InerBox"
-                data-aos="fade-up"
-                data-aos-duration="1500"
-              >
-                <div className="skillName">{item.name}</div>
-                <div className="containerbg">
-                  <div
-                    className="containerIn"
-                    style={{
-                      background: `${primarycolor}`,
-                      width: item.percentage,
-                    }}
-                  ></div>
+        <div className="eduskillsRight" data-aos="fade-up" data-aos-duration="1500">
+
+          <div className="SkillsContainer">
+            {SkillsInTechnologies.map((category, index) => (
+              <div key={index} className="skillCategory" data-aos="fade-up" data-aos-duration="1500">
+                <h3 className="categoryTitle">{category.title}</h3>
+                <div className="skillGrid">
+                  {category.skills.map((skill, i) => (
+                    <div key={i} className="skillWrapper">
+                      <div className="skillBox">
+                        <div className="skillIcon" style={{ color: "black" }}>{skill.icon}</div>
+                      </div>
+                      <span className="skillName">{skill.name}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

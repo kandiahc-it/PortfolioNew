@@ -1,156 +1,292 @@
-#Eduskills{
-     min-height: calc(100vh-4rem);
-     padding-top: 25px;
-     width: 100%;
+#Eduskills {
+    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 40px;
-    gap:100px;
-    
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 30px;
+    overflow: hidden;
 }
-.eduskillsTitle{
+
+.eduskillsTitle {
     margin: 1rem;
     font-size: 3rem;
 }
-.edufoot{
+
+.edufoot {
     display: flex;
     flex-direction: row;
     width: 75%;
     justify-content: space-between;
+    height: 100%;
+    /* Take full height of #Eduskills */
+    overflow-y: auto;
+    /* Enable scrolling here */
+    overflow-x: hidden;
+    padding-right: 10px;
+    /* Prevent scrollbar overlap content */
 }
-.circle{
+
+/* Hide scrollbar for clean look if desired, or keep it */
+/* .edufoot::-webkit-scrollbar {
+    width: 6px;
+}
+
+.edufoot::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+} */
+
+.circle {
     height: 16px;
     width: 16px;
     border-radius: 1000px;
     background: #797979;
     margin-top: 2px;
 }
-.educontainer:hover > .circle{
+
+.educontainer:hover>.circle {
     background: yellow;
 }
-.line{
+
+.line {
     height: 190px;
     width: 3px;
     background: #797979;
     position: absolute;
-    margin-left: 6px;
+    left: 50%;
+    margin-left: -193px;
+    /* Center (0) - 200px (half container) + 7px (align with dot) */
     margin-top: 10px;
     z-index: -1;
 }
-.educontainer{
+
+.educontainer {
     display: flex;
     flex-direction: row;
     width: 400px;
-    gap:25px;
-    
-    
+    gap: 25px;
+
+
 }
-.eduContaninerItems{
+
+.eduContaninerItems {
     display: flex;
     flex-direction: column;
     width: 90%;
     justify-content: center;
-    align-items:flex-start;
-    gap:7px;
+    align-items: flex-start;
+    gap: 7px;
 }
-.eduskillsLeft{
+
+.eduskillsLeft {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    height: 400px;
-    position: relative;
+    position: sticky;
+    top: 0;
+    /* Stick to top of .edufoot */
+    align-items: center;
+    height: fit-content;
+    padding-bottom: 20px;
 }
-.eduskillsRight{
-    display: flex ;
+
+.eduskillsRight {
+    display: flex;
     flex-direction: column;
     width: 51%;
-    gap:40px;
+    gap: 20px;
+    height: auto;
+    /* Let it grow */
+    overflow: visible;
+    /* No internal scroll */
 }
-.Describe{
+
+.SkillsContainer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* Let it grow */
+    overflow: visible;
+    /* No internal scroll */
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+/* Custom Scrollbar */
+.eduskillsRight::-webkit-scrollbar {
     display: none;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 32px;
 }
-.PercentList{
-    display: flex;
-    flex-direction: column;
-    height:300px;
-    overflow: scroll;
-    overflow-x: hidden;
-    gap:20px;
+
+.SkillsContainer::-webkit-scrollbar {
+    display: none;
 }
-.InerBox{
-    display: flex;
-    flex-direction: column;
-    gap:20px;
-}
-.containerbg{
-    display: flex;
-    width: 551px;
-    height: 8px;
-    overflow: hidden;
-    background: #f5f3fe8e;
+
+/* 
+.SkillsContainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
     border-radius: 10px;
 }
-.containerIn{
+
+.SkillsContainer::-webkit-scrollbar-thumb {
+    background: #888;
     border-radius: 10px;
 }
-.Yearedu{
+
+.SkillsContainer::-webkit-scrollbar-thumb:hover {
+    background: #555; */
+/* } */
+
+.skillCategory {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.categoryTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.skillGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.skillWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 80px;
+    /* Fixed width for alignment */
+}
+
+.skillBox {
+    width: 40px;
+    height: 40px;
+    background: #ffffff05;
+    /* or theme color */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skillBox:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.skillIcon {
+    font-size: 24px;
+    /* Icon size */
+    display: flex;
+    color: #000000;
+    /* Default icon color */
+}
+
+.skillName {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+}
+
+.Yearedu {
     margin-top: 7px;
     font-weight: 500;
     font-size: 14px;
 }
-.skillName{
-    font-weight: 400;
-    font-size: 16px;
-}
 
 @media screen and (max-width:768px) {
-    #eduskills{
-        height: fit-content;
-        
+    #Eduskills {
+        height: auto;
+        min-height: fit-content;
+        overflow: visible;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        gap: 50px;
     }
-    .Describe{
+
+    .Describe {
         display: block;
     }
-    .edufoot{
+
+    .edufoot {
         width: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        height: auto;
+        overflow: visible;
+        padding-right: 0;
     }
-    .eduskillsRight{
+
+    .SkillsContainer {
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .eduskillsLeft {
+        position: relative;
+    }
+
+    .eduskillsRight {
         width: 90%;
-       align-items: center;
-       margin-top: -50px;
+        align-items: center;
+        margin-top: 0px;
+        height: auto;
+        overflow: visible;
     }
 }
 
 @media screen and (max-width:456px) {
-    #eduskills{
-        height: fit-content;
-        padding-left: 50px;
-        padding: 0;
+    #Eduskills {
+        height: auto;
+        min-height: fit-content;
+        padding-left: 0;
+        padding: 40px 20px;
         width: 100%;
+        overflow: visible;
     }
-    .edufoot{
+
+    .edufoot {
         width: 100%;
         flex-direction: column;
     }
-    .educontainer{
+
+    .educontainer {
         width: 100%;
     }
-    .eduskillsRight,.eduskillsLeft{
+
+    .eduskillsRight,
+    .eduskillsLeft {
         width: 90%;
     }
-    .PercentList{
+
+    .PercentList {
         width: 100%;
     }
-    .containerbg{
+
+    .containerbg {
         width: 90%;
+    }
+
+    .line {
+        left: 0;
+        margin-left: 6px;
     }
 }
