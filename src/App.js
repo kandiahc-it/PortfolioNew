@@ -10,12 +10,25 @@ import MoreProjects from "./components/MoreProjects/MoreProjects.jsx";
 import Eduskills from "./components/Eduskills/Eduskills.jsx";
 import Loading from "./components/LoadingPage/Loading.jsx";
 function App() {
-  const [isLoading,setIsLoading]=useState(true);
-  useEffect(()=>{
-    setTimeout(()=>{
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const handleLoad = () => setIsLoading(false);
+
+    // Check if the page is already loaded
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+
+    // Safety fallback: Ensure loader removed after 4s effectively if load hangs
+    const timeoutId = setTimeout(() => {
       setIsLoading(false);
-    },5000);
-  },[]);
+    }, 4000);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   const { pathname } = useLocation();
   const navigate = useNavigate();
@@ -55,37 +68,37 @@ function App() {
 
   return (
     <div className="App">
-      {isLoading?
-      <Loading/> :(
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <div className="neon-balls"></div>
+      {isLoading ?
+        <Loading /> : (
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <div className="neon-balls"></div>
 
-              <Navbar />
-              <Intro />
-              <Skills />
-              <Works handleNavigate={handleNavigate} />
-              <Eduskills />
-              <Contact />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/projects"
-          element={
-            <>
-              <MoreProjects /> 
-              <Footer />
-            </>
-          }
-        />
-      </Routes>
-      )  
-    }
+                  <Navbar />
+                  <Intro />
+                  <Skills />
+                  <Works handleNavigate={handleNavigate} />
+                  <Eduskills />
+                  <Contact />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/projects"
+              element={
+                <>
+                  <MoreProjects />
+                  <Footer />
+                </>
+              }
+            />
+          </Routes>
+        )
+      }
     </div>
   );
 }

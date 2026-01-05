@@ -32,14 +32,18 @@
 }
 
 /* Hide scrollbar for clean look if desired, or keep it */
-/* .edufoot::-webkit-scrollbar {
-    width: 6px;
+/* Hide scrollbar for clean look */
+.edufoot {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
 }
 
-.edufoot::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-} */
+.edufoot::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
 
 .circle {
     height: 16px;
@@ -122,7 +126,15 @@
     display: none;
 }
 
+.eduskillsRight::-webkit-scrollbar-thumb {
+    display: none;
+}
+
 .SkillsContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.SkillsContainer::-webkit-scrollbar-thumb {
     display: none;
 }
 
