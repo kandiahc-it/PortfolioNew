@@ -10,9 +10,18 @@ import MoreProjects from "./components/MoreProjects/MoreProjects.jsx";
 import Eduskills from "./components/Eduskills/Eduskills.jsx";
 import Loading from "./components/LoadingPage/Loading.jsx";
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => {
+    // Initialize state based on session storage
+    return !sessionStorage.getItem("app_loaded");
+  });
+
   useEffect(() => {
-    const handleLoad = () => setIsLoading(false);
+    if (!isLoading) return; // Skip if already loaded in this session
+
+    const handleLoad = () => {
+      setIsLoading(false);
+      sessionStorage.setItem("app_loaded", "true");
+    };
 
     // Check if the page is already loaded
     if (document.readyState === "complete") {
@@ -22,13 +31,14 @@ function App() {
       return () => window.removeEventListener("load", handleLoad);
     }
 
-    // Safety fallback: Ensure loader removed after 4s effectively if load hangs
+    // Safety fallback
     const timeoutId = setTimeout(() => {
       setIsLoading(false);
+      sessionStorage.setItem("app_loaded", "true");
     }, 4000);
 
     return () => clearTimeout(timeoutId);
-  }, []);
+  }, [isLoading]);
 
   const { pathname } = useLocation();
   const navigate = useNavigate();
