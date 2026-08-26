@@ -52,6 +52,12 @@ function App() {
   // Restore scroll position when the pathname is "/"
   useEffect(() => {
     if (pathname === "/") {
+      document.title = "Kandiah | Full Stack Developer & Software Engineer Portfolio";
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute("content", "Explore Kandiah's professional React portfolio, showcasing full stack developer capabilities, interactive React components, web services, and user experience designs.");
+      }
+
       const position = sessionStorage.getItem("lastviewed");
       if (position) {
         window.scrollTo(0, parseInt(position, 10));

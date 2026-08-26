@@ -26,24 +26,24 @@ const Intro = () => {
   return (
     <section id="intro">
       <Lightfall
-        colors={['#FFE600', '#F59E0B', '#FFD700']}
+        colors={['#CCA300', '#D97706', '#EAB308']}
         backgroundColor="#000000"
         speed={0.5}
         streakCount={2}
         streakWidth={1}
         streakLength={1}
-        glow={1}
+        glow={0.5}
         density={0.6}
         twinkle={1}
         zoom={3}
-        backgroundGlow={0.5}
-        opacity={1}
+        backgroundGlow={0.2}
+        opacity={0.7}
         mouseInteraction
         mouseStrength={0.5}
         mouseRadius={1}
-        color1="#FFE600"
-        color2="#F59E0B"
-        color3="#FFD700"
+        color1="#CCA300"
+        color2="#D97706"
+        color3="#EAB308"
       />
       <div className="introContent">
         <span className="hello">Hello,</span>
@@ -88,7 +88,11 @@ const Intro = () => {
         </div>
         <div className="heroIcons">
           {socialLinks.map((item, index) => (
-            <div key={index} className="iconBox">
+            <div
+              key={index}
+              className="iconBox"
+              style={{ animationDelay: `${0.8 + index * 0.15}s` }}
+            >
               <Tooltip title={item.head} placement="right-start">
                 <a href={item.link} target="_blank">
                   <item.icon sx={{ fill: `${primarycolor}` }} />

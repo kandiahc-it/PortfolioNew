@@ -237,7 +237,14 @@ const CursorGrid = ({
       return [e.clientX - rect.left, e.clientY - rect.top];
     };
 
+    const isInteractiveElement = el => {
+      if (!el) return false;
+      const tag = el.tagName.toLowerCase();
+      return tag === 'input' || tag === 'textarea' || tag === 'button' || tag === 'a' || el.closest('button') || el.closest('a');
+    };
+
     const onPointerMove = e => {
+      if (isInteractiveElement(e.target)) return;
       const [x, y] = toLocal(e);
       energize(x, y);
       wake();
@@ -245,6 +252,7 @@ const CursorGrid = ({
 
     const onPointerDown = e => {
       if (!propsRef.current.clickPulse) return;
+      if (isInteractiveElement(e.target)) return;
       const [x, y] = toLocal(e);
       pulses.push({ x, y, t0: performance.now() });
       wake();

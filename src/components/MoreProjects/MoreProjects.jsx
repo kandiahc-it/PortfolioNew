@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./moreprojects.css";
 import { SeeMoreButton } from "../StyledComponents/styles";
 import { primarycolor } from "../StyledComponents/theme";
@@ -13,6 +13,14 @@ import { useNavigate } from "react-router-dom";
 
 import { data } from "../../data.js";
 const MoreProjects = () => {
+  useEffect(() => {
+    document.title = "Kandiah | All Projects & Frontend Showcase";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Browse all active development projects, React applications, software components, and layouts built by Kandiah.");
+    }
+  }, []);
+
   const ProjectList = data.ProjectList;
 
   const navigate = useNavigate();
