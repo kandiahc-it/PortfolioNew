@@ -35,6 +35,118 @@ a:hover{
     background-size: 300px 300px;
     filter: blur(100px); /* Add the neon blur effect */
   }
+
+/* Animation Keyframes */
+@keyframes slideDownNavbar {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpText {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageBloom {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-5deg);
+    filter: blur(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+}
+
+@keyframes circleBloom {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+    filter: blur(15px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes slideInIcon {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Selector Animations mapping */
+.navbar {
+  animation: slideDownNavbar 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.1s;
+}
+
+.hello {
+  animation: slideUpText 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.2s;
+}
+
+.introText {
+  animation: slideUpText 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.35s;
+}
+
+.introDesc {
+  animation: slideUpText 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.5s;
+}
+
+.introPara {
+  animation: slideUpText 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.6s;
+}
+
+.btn {
+  animation: slideUpText 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.7s;
+}
+
+.glow-circle {
+  animation: circleBloom 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.3s;
+}
+
+.bg {
+  animation: imageBloom 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.5s;
+}
+
+.iconBox {
+  animation: slideInIcon 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.downloadicon {
+  animation: circleBloom 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.75s;
+}
+
+
   
  
   
