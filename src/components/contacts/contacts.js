@@ -1,13 +1,14 @@
 import React, { useRef } from 'react';
 import './contacts.css';
 import emailjs from '@emailjs/browser';
+import CursorGrid from '../ui/CursorGrid/CursorGrid';
 import { GitHub, Instagram, LinkedIn, Mail, Phone } from '@mui/icons-material';
 import { primarycolor } from '../StyledComponents/theme';
 import { SeeMoreButton } from '../StyledComponents/styles';
 import PersonIcon from '@mui/icons-material/Person';
 import { data } from '../../data';
 const Contact = () => {
-  const socialLinks= data.socialLinks;
+  const socialLinks = data.socialLinks;
 
 
 
@@ -22,42 +23,57 @@ const Contact = () => {
       form.current,
       'geQsi1WNvWziOkfei' // Your public key
     )
-    .then((result) => {
+      .then((result) => {
         console.log('SUCCESS!');
         e.target.reset();
         alert("Email sent !");
-    },
-    (error) => {
-        console.log('FAILED...', error.text);
-        alert("Failed to send email.");
-    });
+      },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert("Failed to send email.");
+        });
   };
 
   return (
     <section id='contactPage'>
+      <CursorGrid
+        cellSize={60}
+        color="#ffff00c5"
+        radius={140}
+        falloff="sharp"
+        holdTime={400}
+        fadeDuration={800}
+        lineWidth={1.2}
+        maxOpacity={1}
+        fillOpacity={0.01}
+        gridOpacity={0}
+        cellRadius={0}
+        clickPulse
+        pulseSpeed={600}
+      />
       <div className='contact'>
-        <h1 className='contactPageTitle'><PersonIcon sx={{height:"3rem",width:"3rem",marginTop:"25px"}}/>Contact Me</h1>
+        <h1 className='contactPageTitle'><PersonIcon sx={{ height: "3rem", width: "3rem", marginTop: "25px" }} />Contact Me</h1>
         <span className='contactDesc'>Please fill out the form to discuss any work opportunities</span>
         <form className='contactForm' ref={form} onSubmit={sendEmail}>
           <input type='text' className='name' placeholder='Your Name' name='from_name' required />
           <input type='email' className='email' placeholder='Your Email' name='your_email' required />
           <textarea className='msg' name='message' rows="5" placeholder='Your message' required></textarea>
-          <button type='submit' value='Send' className='submitBtn'><SeeMoreButton text="Submit"/></button>
+          <button type='submit' value='Send' className='submitBtn'><SeeMoreButton text="Submit" /></button>
         </form>
       </div>
       <div className='contactright'>
         <div className='contactrightText'>Contact Details</div>
-            {socialLinks.map((item,index)=>(
-              <a href={item.link} target='_blank' key={index} className='full'>
-                <div className='icon'>
-                  <item.img sx={{fill:`${primarycolor}`}}/>
-                </div>
-                <div className='contactininfor'>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              </a>
-            ))}
+        {socialLinks.map((item, index) => (
+          <a href={item.link} target='_blank' key={index} className='full'>
+            <div className='icon'>
+              <item.img sx={{ fill: `${primarycolor}` }} />
+            </div>
+            <div className='contactininfor'>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+          </a>
+        ))}
       </div>
     </section>
   )

@@ -51,7 +51,7 @@ const Eduskills = () => {
                   {category.skills.map((skill, i) => (
                     <div key={i} className="skillWrapper">
                       <div className="skillBox">
-                        <div className="skillIcon" style={{ color: "black" }}>{skill.icon}</div>
+                        <div className="skillIcon">{skill.icon}</div>
                       </div>
                       <span className="skillName">{skill.name}</span>
                     </div>

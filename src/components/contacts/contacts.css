@@ -1,5 +1,5 @@
 #contactPage {
-    height: calc(100vh-4rem);
+    height: calc(100vh - 4rem);
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -9,6 +9,7 @@
     justify-content: center;
     margin-top: -10px;
     padding-bottom: 40px;
+    position: relative;
 }
 
 .contact {
@@ -16,6 +17,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .contactPageTitle {
@@ -69,6 +72,8 @@
     display: flex;
     flex-direction: column;
     gap:10px;
+    position: relative;
+    z-index: 1;
 }
 .contactrightText{
     display: none;
