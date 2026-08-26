@@ -1,6 +1,7 @@
 import React from "react";
 import "./intro.css";
 import { Link } from "react-scroll";
+import Lightfall from '../ui/Lightfall/Lightfall';
 import btnImg from "../assets/hireme.png";
 import bg from "../assets/Frame 1.png";
 import frame from "../assets/frameCircle.png";
@@ -24,6 +25,26 @@ const Intro = () => {
    const socialLinks = data.socialLinksHero;
   return (
     <section id="intro">
+      <Lightfall
+        colors={['#FFE600', '#F59E0B', '#FFD700']}
+        backgroundColor="#000000"
+        speed={0.5}
+        streakCount={2}
+        streakWidth={1}
+        streakLength={1}
+        glow={1}
+        density={0.6}
+        twinkle={1}
+        zoom={3}
+        backgroundGlow={0.5}
+        opacity={1}
+        mouseInteraction
+        mouseStrength={0.5}
+        mouseRadius={1}
+        color1="#FFE600"
+        color2="#F59E0B"
+        color3="#FFD700"
+      />
       <div className="introContent">
         <span className="hello">Hello,</span>
         <span className="introText">

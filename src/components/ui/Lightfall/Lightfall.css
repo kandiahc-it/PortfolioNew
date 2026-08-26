@@ -1,0 +1,12 @@
+.lightfall-container {
+  position: absolute;
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: calc(100% + 7rem);
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(8px);
+}
