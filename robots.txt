@@ -1,5 +1,6 @@
+Sitemap: https://kandiahc-it.github.io/PortfolioNew/sitemap.xml
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
 
-Sitemap: https://kandiahc-it.github.io/PortfolioNew/sitemap.xml
+
